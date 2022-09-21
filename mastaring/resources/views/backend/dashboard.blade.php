@@ -1,26 +1,9 @@
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    
-
-    @extends('backend.includes.head')
-    @extends('backend.includes.css')
-    
-
-    
-  </head>
-
-  <body>
-
-    
-  @extends('backend.includes.leftbar')
-  @extends('backend.includes.topbar')
-  @extends('backend.includes.rightbar')
-
- 
-    <!-- ########## START: MAIN PANEL ########## -->
-    <div class="br-mainpanel">
+  @extends('backend.mastaring.master')
+  @section('swarnali')
+  
+  
+  <!-- ########## START: MAIN PANEL ########## -->
+  <div class="br-mainpanel">
       <div class="br-pagetitle">
         <i class="icon ion-ios-home-outline"></i>
         <div>
@@ -392,7 +375,4 @@
       </footer>
     </div><!-- br-mainpanel -->
     <!-- ########## END: MAIN PANEL ########## -->
-    @extends('backend.includes.footer')
-    @extends('backend.includes.scripts')
-  </body>
-</html>
+    @endsection
