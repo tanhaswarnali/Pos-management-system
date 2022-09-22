@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Backend\BranchController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,8 +16,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// branch route
+Route::group(['prefix'=>'/branch'],function(){
+    Route::get('/add',[BranchController::class,'add'])->name('branchadd');
 
-
-Route::get('/admin', function () {
-    return view('backend.dashboard');
 });
+
+// dashboard route
+
+    Route::get('/admin', function () {
+    return view('backend.dashboard');
+})->name("dashboard");
+
+
+ Route::get('/admin/addproduct', function () {
+     return view('backend.pages.product.addproduct');
+ })->name("addproduct");
+ 
+ 
+ Route::get('/admin/manageproduct', function () {
+     return view('backend.pages.product.manageproduct');
+ })->name("manageproduct");

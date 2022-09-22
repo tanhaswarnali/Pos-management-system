@@ -15,15 +15,67 @@
         <li class="br-menu-item">
           <a href="#" class="br-menu-link with-sub">
             <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
-            <span class="menu-item-label">Product</span>
+            <span class="menu-item-label">Branch</span>
           </a><!-- br-menu-link -->
           <ul class="br-menu-sub">
-            <li class="sub-item"><a href="card-dashboard.html" class="sub-link">Add Product</a></li>
-            <li class="sub-item"><a href="card-social.html" class="sub-link">Manage Product</a></li>
+            <li class="sub-item"><a href="{{ Route('branchadd') }}" class="sub-link">Add Product</a></li>
+            <li class="sub-item"><a href="{{Route('branchadd')}}" class="sub-link">Manage Product</a></li>
   
           </ul>
         </li>
-        
+        <!-- menu item end -->
+        <!-- menu item -->
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
+            <span class="menu-item-label">Product</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+   
+            <li class="sub-item"><a href="{{Route('branchadd')}}" class="sub-link">Manage Product</a></li>
+  
+          </ul>
+        </li>
+        <!-- menu end -->
+        <!-- menu item -->
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
+            <span class="menu-item-label">Stock</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item"><a href="{{Route('branchadd')}}" class="sub-link">Add Product</a></li>
+           
+  
+          </ul>
+        </li>
+        <!-- menu end -->
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
+            <span class="menu-item-label">Purchase</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item"><a href="{{Route('branchadd')}}" class="sub-link">Add Product</a></li>
+            <li class="sub-item"><a href="{{Route('branchadd')}}" class="sub-link">Manage Product</a></li>
+  
+          </ul>
+        </li>
+        <!-- menu end -->
+        <!-- menu item -->
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="menu-item-icon icon ion-ios-photos-outline tx-20"></i>
+            <span class="menu-item-label">Sales</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item"><a href="{{Route('branchadd')}}" class="sub-link">Add Product</a></li>
+            <li class="sub-item"><a href="{{Route('branchadd')}}" class="sub-link">Manage Product</a></li>
+  
+          </ul>
+        </li>
+        <!-- nemu end -->
+
       </ul><!-- br-sideleft-menu -->
 
     
