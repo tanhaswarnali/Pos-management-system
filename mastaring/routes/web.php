@@ -19,7 +19,7 @@ Route::get('/', function () {
 // branch route
 Route::group(['prefix'=>'/branch'],function(){
     Route::get('/add',[BranchController::class,'add'])->name('branchadd');
-
+    Route::post('/store',[BranchController::class,'store'])->name('branchstore');
 });
 
 // dashboard route
@@ -29,11 +29,11 @@ Route::group(['prefix'=>'/branch'],function(){
 })->name("dashboard");
 
 
- Route::get('/admin/addproduct', function () {
-     return view('backend.pages.product.addproduct');
- })->name("addproduct");
+//  Route::get('/admin/addproduct', function () {
+//      return view('backend.pages.product.addproduct');
+//  })->name("addproduct");
  
  
- Route::get('/admin/manageproduct', function () {
-     return view('backend.pages.product.manageproduct');
- })->name("manageproduct");
+//  Route::get('/admin/manageproduct', function () {
+//      return view('backend.pages.product.manageproduct');
+//  })->name("manageproduct");
