@@ -6,7 +6,11 @@
         <div class="form-group">
         <label >Branch Name:</label>
                 <input  class="form-control" type="text" name="br_name" placeholder="Enter Branch Name">
-                
+                <span class="text-danger">
+                    @error('br_name')
+                    {{$message}}
+                    @enderror
+               </span>
             </div>
             <div class="form-group">
             <label >Branch Manager Name:</label>
@@ -17,7 +21,11 @@
             <div class="form-group">
             <label >Phone:</label>
                 <input  class="form-control" type="text" name="phone" placeholder="Enter Phone">
-                
+                <span class="text-danger">
+                    @error('br_name')
+                    {{$message}}
+                    @enderror
+               </span>
             </div>
             <div class="form-group">
             <label >Email:</label>

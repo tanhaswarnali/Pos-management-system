@@ -20,6 +20,9 @@ Route::get('/', function () {
 Route::group(['prefix'=>'/branch'],function(){
     Route::get('/add',[BranchController::class,'add'])->name('branchadd');
     Route::post('/store',[BranchController::class,'store'])->name('branchstore');
+    Route::get('/show',[BranchController::class,'show'])->name('branchshow');
+    Route::get('/status{id}',[BranchController::class,'status'])->name('status');
+    
 });
 
 // dashboard route

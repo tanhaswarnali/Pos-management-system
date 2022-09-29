@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+// branch.php
+use App\Models\Backend\Branch;
 
 class BranchController extends Controller
 {
@@ -22,11 +24,17 @@ class BranchController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    public function status($id){
+        $find=Branch::find($id);
+        if($find->status==1){
+            $find->status="2";
+        }
+        else{
+            $find->status="1";
+        }
+        $find->update();
+        return redirect()->route("branchshow");
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -35,7 +43,20 @@ class BranchController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'br_name'=>'required',
+            'br_manager'=>'required',
+            'phone'=>'required'
+        ]);
+        
+        $branch = new Branch;
+        $branch->br_name =$request->br_name;
+        $branch->br_manager =$request->br_manager;
+        $branch->br_phone =$request->phone;
+        $branch->br_email =$request->email;
+        $branch->status =$request->status;
+        $branch->save();
+        return redirect()->route("branchshow");
     }
 
     /**
@@ -44,9 +65,10 @@ class BranchController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $branch = Branch::all();
+        return view("backend.pages.branch.manage", compact("branch"));
     }
 
     /**
